@@ -1,0 +1,52 @@
+{
+  "name": "JournalArticle",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "reykjavik-atmosphere",
+        "winter-living",
+        "architecture-light",
+        "icelandic-rituals",
+        "slow-travel",
+        "seasonal-guides",
+        "design-interiors"
+      ]
+    },
+    "hero_image": {
+      "type": "string",
+      "description": "Image URL"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Short teaser for cards"
+    },
+    "body": {
+      "type": "string",
+      "description": "Full article markdown body"
+    },
+    "author": {
+      "type": "string",
+      "default": "MUSE"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "slug"
+  ]
+}

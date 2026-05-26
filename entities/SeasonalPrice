@@ -1,0 +1,30 @@
+{
+  "name": "SeasonalPrice",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string",
+      "description": "Property ID"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "End date"
+    },
+    "nightly_rate": {
+      "type": "number",
+      "description": "Override nightly rate"
+    }
+  },
+  "required": [
+    "property_id",
+    "start_date",
+    "end_date",
+    "nightly_rate"
+  ]
+}

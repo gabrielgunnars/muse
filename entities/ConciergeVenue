@@ -1,0 +1,45 @@
+{
+  "name": "ConciergeVenue",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "coffee",
+        "restaurant",
+        "bar",
+        "bookshop",
+        "gallery",
+        "nature",
+        "shop"
+      ]
+    },
+    "area": {
+      "type": "string",
+      "description": "Area of Reykjav\u00edk"
+    },
+    "description": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}

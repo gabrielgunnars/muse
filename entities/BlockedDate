@@ -1,0 +1,27 @@
+{
+  "name": "BlockedDate",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string",
+      "description": "Property ID"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Reason for blocking"
+    }
+  },
+  "required": [
+    "property_id",
+    "start_date",
+    "end_date"
+  ]
+}

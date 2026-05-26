@@ -1,0 +1,26 @@
+{
+  "name": "SiteImage",
+  "type": "object",
+  "properties": {
+    "section": {
+      "type": "string",
+      "description": "Which section this image belongs to, e.g. 'atmosphere'"
+    },
+    "position": {
+      "type": "number",
+      "description": "Order/position index"
+    },
+    "src": {
+      "type": "string",
+      "description": "Image URL"
+    },
+    "caption": {
+      "type": "string",
+      "description": "Caption text shown on the image"
+    }
+  },
+  "required": [
+    "section",
+    "src"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "name": "Property",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Apartment name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "description": {
+      "type": "string",
+      "description": "Rich description"
+    },
+    "short_description": {
+      "type": "string",
+      "description": "One-line summary for cards"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Image URLs"
+    },
+    "max_guests": {
+      "type": "number",
+      "description": "Maximum number of guests"
+    },
+    "bedrooms": {
+      "type": "number",
+      "description": "Number of bedrooms"
+    },
+    "base_nightly_rate": {
+      "type": "number",
+      "description": "Base price per night in EUR"
+    },
+    "cleaning_fee": {
+      "type": "number",
+      "description": "One-time cleaning fee"
+    },
+    "tax_rate": {
+      "type": "number",
+      "description": "Tax percentage"
+    },
+    "amenities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of amenity tags"
+    },
+    "door_code": {
+      "type": "string",
+      "description": "Entry door code"
+    },
+    "wifi_details": {
+      "type": "string",
+      "description": "WiFi network and password"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether property is listed"
+    },
+    "pay_on_arrival": {
+      "type": "boolean",
+      "default": false,
+      "description": "Allow pay on arrival"
+    },
+    "address": {
+      "type": "string",
+      "description": "Full address"
+    },
+    "lat": {
+      "type": "number",
+      "description": "Latitude"
+    },
+    "lng": {
+      "type": "number",
+      "description": "Longitude"
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "base_nightly_rate"
+  ]
+}

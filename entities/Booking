@@ -1,0 +1,80 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string",
+      "description": "Property ID"
+    },
+    "property_name": {
+      "type": "string",
+      "description": "Property name for display"
+    },
+    "guest_name": {
+      "type": "string"
+    },
+    "guest_email": {
+      "type": "string"
+    },
+    "guest_phone": {
+      "type": "string"
+    },
+    "check_in": {
+      "type": "string",
+      "format": "date"
+    },
+    "check_out": {
+      "type": "string",
+      "format": "date"
+    },
+    "guests": {
+      "type": "number"
+    },
+    "nightly_total": {
+      "type": "number"
+    },
+    "cleaning_fee": {
+      "type": "number"
+    },
+    "tax": {
+      "type": "number"
+    },
+    "total_price": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "cancelled",
+        "completed"
+      ],
+      "default": "pending"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "online",
+        "pay_on_arrival"
+      ],
+      "default": "online"
+    },
+    "gift_card_code": {
+      "type": "string"
+    },
+    "special_requests": {
+      "type": "string"
+    },
+    "internal_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "property_id",
+    "guest_name",
+    "guest_email",
+    "check_in",
+    "check_out"
+  ]
+}

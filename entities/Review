@@ -1,0 +1,32 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "property_id": {
+      "type": "string"
+    },
+    "booking_id": {
+      "type": "string"
+    },
+    "guest_name": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "description": "1-5 star rating"
+    },
+    "body": {
+      "type": "string"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "property_id",
+    "guest_name",
+    "rating",
+    "body"
+  ]
+}

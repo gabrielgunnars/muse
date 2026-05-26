@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300&family=DM+Sans:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --background: 13 12 11;
+    --foreground: 237 232 225;
+    --surface: 22 20 18;
+    --surface-raised: 30 26 22;
+
+    --card: 22 20 18;
+    --card-foreground: 237 232 225;
+    --popover: 22 20 18;
+    --popover-foreground: 237 232 225;
+    --primary: 237 232 225;
+    --primary-foreground: 13 12 11;
+    --secondary: 140 126 110;
+    --secondary-foreground: 237 232 225;
+    --muted: 30 26 22;
+    --muted-foreground: 140 126 110;
+    --accent: 189 170 131;
+    --accent-foreground: 13 12 11;
+    --destructive: 239 68 68;
+    --destructive-foreground: 237 232 225;
+    --border: 237 232 225;
+    --input: 30 26 22;
+    --ring: 189 170 131;
+
+    --chart-1: 189 170 131;
+    --chart-2: 140 126 110;
+    --chart-3: 237 232 225;
+    --chart-4: 30 26 22;
+    --chart-5: 255 255 255;
+    --radius: 0.125rem;
+
+    /* Named palette */
+    --bone: #EDE8E1;
+    --clay: #BDAA83;
+    --stone: #8C7E6E;
+    --charcoal: #161412;
+    --ink: #0D0C0B;
+    --warm-dark: #1E1A16;
+    --rust: #B85C3E;
+    --cream: #F5EFE6;
+
+    --sidebar-background: 22 20 18;
+    --sidebar-foreground: 237 232 225;
+    --sidebar-primary: 189 170 131;
+    --sidebar-primary-foreground: 13 12 11;
+    --sidebar-accent: 30 26 22;
+    --sidebar-accent-foreground: 237 232 225;
+    --sidebar-border: 237 232 225;
+    --sidebar-ring: 189 170 131;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border/10 outline-ring/30;
+  }
+  body {
+    background-color: var(--ink);
+    color: var(--bone);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 200;
+  }
+}
+
+@layer utilities {
+  .font-heading { font-family: var(--font-heading); }
+  .font-body { font-family: var(--font-body); }
+
+  .text-bone { color: var(--bone); }
+  .text-clay { color: var(--clay); }
+  .text-stone { color: var(--stone); }
+  .text-charcoal { color: var(--charcoal); }
+  .text-ink { color: var(--ink); }
+  .text-rust { color: var(--rust); }
+
+  .bg-bone { background-color: var(--bone); }
+  .bg-clay { background-color: var(--clay); }
+  .bg-stone { background-color: var(--stone); }
+  .bg-charcoal { background-color: var(--charcoal); }
+  .bg-ink { background-color: var(--ink); }
+  .bg-warm-dark { background-color: var(--warm-dark); }
+  .bg-rust { background-color: var(--rust); }
+  .bg-cream { background-color: var(--cream); }
+  .bg-surface { background-color: #161412; }
+  .bg-surface-raised { background-color: #1E1A16; }
+
+  .border-clay { border-color: var(--clay); }
+  .border-stone { border-color: var(--stone); }
+  .border-bone { border-color: var(--bone); }
+  .border-rust { border-color: var(--rust); }
+  .border-warm { border-color: rgba(237, 232, 225, 0.12); }
+
+  .tracking-brand { letter-spacing: 0.2em; }
+  .tracking-wider-brand { letter-spacing: 0.3em; }
+
+  .label-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 300;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+  }
+
+  /* Cinematic image treatment */
+  .img-cinematic {
+    filter: contrast(1.05) brightness(0.92) saturate(0.85);
+  }
+
+  .img-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 14, 8, 0.18);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+}
